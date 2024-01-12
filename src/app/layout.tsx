@@ -5,8 +5,8 @@ import SideBar from "@/components/navigation/SideBar";
 
 const inter = Inter({ subsets: ["latin"] });
 const popins = Poppins({
-    subsets: ["latin"],
-    weight: ["100", "200", "300", "400", "500", "600"],
+    subsets: ["latin-ext"],
+    weight: [ "200", "300"],
 });
 
 export const metadata: Metadata = {
@@ -22,6 +22,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${popins.className} flex`}>
+                <div id="modal"></div>
                 <SideBar />
                 <main className="flex-1">{children}</main>
             </body>

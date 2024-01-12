@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 const Search = () => {
     return (
         <div
-            className={`bg-[#E6E6E6]/60 ring-1 text-[.7rem] ring-slate-200/80 min-w-[20rem] flex items-center px-3 rounded`}
+            className={`bg-[#F2F2F2] ring-1 text-[.7rem] ring-slate-200/80 hidden  min-w-[20rem] lg:flex items-center px-3 rounded`}
         >
             <CiSearch className="text-slate-400 text-xl font-semibold" />
             <input
