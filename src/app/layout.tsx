@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/components/navigation/SideBar";
+import Provider from "@/store/store";
 
-const inter = Inter({ subsets: ["latin"] });
 const popins = Poppins({
     subsets: ["latin-ext"],
-    weight: [ "200", "300"],
+    weight: ["200", "300"],
 });
 
 export const metadata: Metadata = {
@@ -18,13 +18,19 @@ export default function RootLayout({
     children,
 }: {
     children: React.ReactNode;
-}) {
-    return (
+    }) {
+   
+    return(
         <html lang="en">
             <body className={`${popins.className} flex`}>
                 <div id="modal"></div>
-                <SideBar />
-                <main className="flex-1">{children}</main>
+                <div id="modal-overlay"></div>
+                <Provider>
+                    <SideBar />
+                    <main className="flex-1">
+                        {children}
+                    </main>
+                </Provider>
             </body>
         </html>
     );

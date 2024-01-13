@@ -1,10 +1,15 @@
+'use client'
+import { useStorex } from "@/store/store";
 import Header from "@/components/navigation/Header/Header";
-import Payment from "@/components/payment/Payment";
+import Payment from "@/components/payment/PaymentProvider";
 import Container from "@/UI/Container";
+import SetUpCashFree from "@/UI/Modal/SetUpCashFree";
 
 const page = () => {
+    const data = useStorex() as any
     return (
         <div className="flex-1 bg-bgColor h-screen flex flex-col">
+            {data.openSetUp && <SetUpCashFree />}
             <Header />
             <Container className="w-[70%] lg:ml-[12rem] mt-8 p-8 shadow-sm drop-shadow-sm bg-white rounded-xl space-y-7">
                 <div>
@@ -19,7 +24,5 @@ const page = () => {
         </div>
     );
 };
-
-
 
 export default page;
