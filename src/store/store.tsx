@@ -44,7 +44,7 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
         },
         {
             title: "American Express",
-            img: "/Vector (5).scg",
+            img: "/7b32514134e62ce3 1.svg",
         },
         {
             title: "Diner Club",
@@ -56,7 +56,7 @@ const Provider = ({ children }: { children: React.ReactNode }) => {
         },
         {
             title: "Airtel Money",
-            img: "/7b32514134e62ce3 1.svg",
+            img: "/Vector (5).svg",
         },
     ]);
 

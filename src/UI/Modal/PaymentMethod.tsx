@@ -3,11 +3,9 @@ import React from "react";
 import BackDrop from "./BackDrop";
 import { useStorex } from "@/store/store";
 import Toggle from "../Toggle";
-import SetupButton from "../Button/SetupButton";
+import SetupButton, { Paragraph } from "../Button/SetupButton";
 
 const PaymentMethod = () => {
-    const handleFinishSetUp = () => {
-    }
     const data = useStorex() as any;
     return (
         <>
@@ -47,10 +45,8 @@ const PaymentMethod = () => {
                     })}
                 </div>
                 <div className="absolute bottom-0 space-y-4  bg-white p-4 w-full flex items-center flex-col">
-                    <SetupButton/>
-                    <p className="underline text-xs mr-[4rem]">
-                        Edit Cashfree details
-                    </p>
+                    <SetupButton />
+                    <Paragraph/>
                 </div>
             </div>
         </>
