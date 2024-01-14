@@ -76,14 +76,14 @@ const NavLinks = () => {
         <Image src={"/Speaker.svg"} alt="" width={16} height={16} />
     );
     const Logos = [
-        <GoHome />,
-        <LuClipboardList />,
-        <PiSquaresFour />,
-        <FiTruck />,
+        <GoHome key={"home"}/>,
+        <LuClipboardList key={"cliboard"}/>,
+        <PiSquaresFour key={"squares"}/>,
+        <FiTruck key={"truck"}/>,
         Speaker,
-        <PiChartBarLight />,
-        <MdPayments />,
-        <SlCursor />,
+        <PiChartBarLight key={"pichartBar"}/>,
+        <MdPayments key={"payments"}/>,
+        <SlCursor key={"cursor"}/>,
         Vect,
         Audience,
         Appearance,
@@ -92,15 +92,16 @@ const NavLinks = () => {
     return (
         <div className="flex flex-col w-full text-sm space-y-[0.2rem]">
             {Links.map((index, number) => (
-                <Card
-                    key={index.path}
-                    className={
-                        "hover:bg-primaryLightBlue w-[80%] mx-auto transition-colors"
-                    }
-                >
-                    <span className="text-lg">{Logos[number]}</span>
-                    <span className="text-[.75rem]">{index.title}</span>
-                </Card>
+                <div key={number}>
+                    <Card
+                        className={
+                            "hover:bg-primaryLightBlue w-[80%] mx-auto transition-colors"
+                        }
+                    >
+                        <span className="text-lg">{Logos[number]}</span>
+                        <span className="text-[.75rem]">{index.title}</span>
+                    </Card>
+                </div>
             ))}
         </div>
     );

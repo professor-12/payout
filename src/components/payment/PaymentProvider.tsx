@@ -13,7 +13,7 @@ const Payment = () => {
         <>
             <div className="space-y-2">
                 {data?.paymentProviders.map((item: any) => (
-                    <div className="flex justify-between p-1">
+                    <div key={item.title} className="flex justify-between p-1">
                         <div className="flex items-center space-x-3">
                             <div className="border h-[3.7rem] flex items-center p-2 rounded">
                                 <Image

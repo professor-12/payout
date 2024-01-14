@@ -6,7 +6,7 @@ import Container from "@/UI/Container";
 import SetUpCashFree from "@/UI/Modal/SetUpCashFree";
 import PaymentMethod from "@/UI/Modal/PaymentMethod";
 
-const page = () => {
+const Page = () => {
     const data = useStorex() as any;
     return (
         <div className="flex-1 bg-bgColor h-screen flex flex-col">
@@ -27,4 +27,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;

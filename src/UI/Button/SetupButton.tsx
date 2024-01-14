@@ -10,6 +10,7 @@ const SetupButton = () => {
             items.setup = true;
             return prev;
         });
+        data.setOpenModal("none")
     };
     return (
         <>
