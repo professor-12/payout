@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Inter } from "next/font/google";
 import BackDrop from "./BackDrop";
 import Image from "next/image";
@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const SetUpCashFree = () => {
     return (
-        <>            
+        <>
             <BackDrop />
             <div
                 className={`${inter.className} fixed  z-50 xl:w-[40%] top-20 lg:-[45%] md:w-[60%] mx-auto lg:left-[35%] md:left-[25%] bg-white p-8 rounded-xl xl:left-[30%]`}
@@ -32,7 +32,7 @@ const SetUpCashFree = () => {
                         <Image
                             src={"/Info.svg"}
                             className="mr-2"
-                            alt="InfoSvg" 
+                            alt="InfoSvg"
                             width={20}
                             height={20}
                         />
@@ -47,7 +47,7 @@ const SetUpCashFree = () => {
                 <Form />
             </div>
         </>
-)
+    );
 };
 
 export default SetUpCashFree;

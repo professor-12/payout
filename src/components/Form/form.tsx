@@ -14,7 +14,7 @@ const inputfield: Array<Form> = [
 ];
 
 const Form = () => {
-    const data = useStorex() as any
+    const data = useStorex() as any;
     const [userInputData, setUserInputData] = useState<any>(
         inputfield.map((items) => {
             return { title: items.title, value: "" };
@@ -29,9 +29,8 @@ const Form = () => {
     };
 
     const handleUserSubmission = () => {
-        data.setOpenSetup(false)
-        data.setPaymentMethod(true)
-    }
+        data.setOpenModal("paymentmethod");
+    };
 
     return (
         <form className="space-y-3">

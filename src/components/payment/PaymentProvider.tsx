@@ -6,8 +6,8 @@ import Image from "next/image";
 const Payment = () => {
     const data = useStorex() as any;
     const handleClick = (identifier: any) => {
-        data.setOpenSetup(true);
-        console.log(data.openSetUp);
+        data.setOpenModal("setup");
+        data.setSetUpProduct(identifier);
     };
     return (
         <>
@@ -40,7 +40,14 @@ const Payment = () => {
                                 </button>
                             </div>
                         ) : (
-                            <div>Detail</div>
+                            <div className="flex items-center">
+                                <button
+                                    onClick={() => {}}
+                                    className="border p-1 px-3 rounded text-gray-600 text-sm  font-medium"
+                                >
+                                    Detail
+                                </button>
+                            </div>
                         )}
                     </div>
                 ))}
